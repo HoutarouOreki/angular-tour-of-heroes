@@ -11,48 +11,49 @@
     display: flex;
   }
   
-  .heroes button {
+  .heroes a {
     flex: 1;
     cursor: pointer;
     position: relative;
     left: 0;
     background-color: #EEE;
-    margin: .5em;
+    margin: 0.1em;
     padding: 0;
     border-radius: 4px;
     display: flex;
     align-items:center;
     height: min-content;
     border: none;
+    text-decoration: none;
   }
 
-  .heroes button span {
+  .heroes a span {
       padding: 10px;
       height: min-content;
   }
   
-  .heroes button:hover {
+  .heroes a:hover {
     color: #2c3a41;
     background-color: #e6e6e6;
     left: .1em;
   }
   
-  .heroes button:active {
+  .heroes a:active {
     background-color: darkcyan;
     color: #fafafa;
   }
   
-  .heroes button.selected {
+  .heroes a.selected {
     background-color: cornflowerblue;
     color: white;
   }
   
-  .heroes button.selected:hover {
+  .heroes a.selected:hover {
     background-color: skyblue;
     color: white;
   }
   
-  .heroes button.selected:active {
+  .heroes a.selected:active {
     background-color: darkcyan;
     color: white;
   }

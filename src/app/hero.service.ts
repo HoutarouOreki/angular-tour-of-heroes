@@ -9,6 +9,14 @@ import { HEROES } from './mock-heroes';
 })
 export class HeroService {
 
+  getHero(id: number): Observable<Hero> {
+    // For now, assume that a hero with the specified `id` always exists.
+    // Error handling will be added later.
+    const hero = HEROES.find(h => h.id === id)!;
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    return of(hero);
+  }
+
   constructor(private messageService: MessageService) { }
 
   getHeroes(): Observable<Hero[]> {
